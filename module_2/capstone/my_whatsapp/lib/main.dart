@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      title: 'Flutter Demo',
+      title: 'My WhatsApp',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -18,9 +18,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: Text(
+            'My WhatsApp',
+            style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }
