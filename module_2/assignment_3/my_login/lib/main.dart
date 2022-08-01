@@ -46,6 +46,7 @@ class _HomePageState extends State<HomePage> {
            * Hint:
            *  - [ Padding ] widget can be used to wrap the form
            *  - [ EdgeInsets.symmetric() ] can be applied to provide consistent spacing in horizontal and vertical axis.
+           *  - You may wrap the [ Form ] in a [ SingleChildScrollView ] so that it will not overflow when keyboard is open.
            */
           child: Form(
             /**
@@ -192,7 +193,8 @@ class _HomePageState extends State<HomePage> {
                  * 
                  * Hint:
                  *  - Apart from [ ElevatedButton.icon() ] constructor, you may also use the approach of 
-                 *    putting icon and label into [ Row ] so that the spacing can be customized   
+                 *    putting icon and label into [ Row ] so that the spacing can be customized
+                 *  - Provide [ Padding ] with [ horizontal: 36.0 ] to create shorter button   
                  */
 
                 // Social Login Buttons
