@@ -1,4 +1,4 @@
-final quizData = [
+final List<Map<String,dynamic>> quizData = [
   {
     "question_id": "1",
     "question_string": "Infants have more bones than adults.",

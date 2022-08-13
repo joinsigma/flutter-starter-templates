@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_quiz/quiz_data.dart';
 
 void main() {
   runApp(
@@ -22,7 +21,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var counter = 0;
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +34,12 @@ class _HomePageState extends State<HomePage> {
         child: Center(
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  'Question ${counter + 1}',
+                  'Question 1',
                   style: const TextStyle(
                       fontSize: 35.0, fontWeight: FontWeight.bold),
                 ),
@@ -48,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                   height: 250,
                   alignment: Alignment.center,
                   child: Text(
-                    quizData[counter]['question_string'].toString(),
+                    "Question description",
                     style: const TextStyle(fontSize: 20.0),
                     textAlign: TextAlign.center,
                   ),
@@ -72,9 +71,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       onTap: () {
                         /**
-                         * Todo: 
+                         * Todo:
                          * - if user selected 'True', they should be navigated to the second screen
-                         * 
+                         *
                          * Hint:
                          * - you may use Navigator.push() to trigger screens switching
                          */
@@ -96,9 +95,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       onTap: () {
                         /**
-                         * Todo: 
+                         * Todo:
                          * - if user selected 'False', they should be navigated to the second screen
-                         * 
+                         *
                          * Hint:
                          * - you may use Navigator.push() to trigger screens switching
                          */
@@ -114,16 +113,10 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Switch to next question, reset to first question if comes to end of the question
-          setState(() {
-            if (counter < quizData.length - 1) {
-              counter++;
-            } else {
-              counter = 0;
-            }
-          });
         },
         child: const Text('Next'),
       ),
     );
   }
 }
+
